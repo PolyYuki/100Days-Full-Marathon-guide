@@ -125,7 +125,7 @@ h2::after {
 }
 
 .solution-diagram {
-    max-width: 90%;
+    max-width: 45%;
     height: auto;
     margin-top: 40px;
     border-radius: 15px;
@@ -156,6 +156,8 @@ h2::after {
     margin-bottom: 20px;
     border: 5px solid #ff7f50;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100px; /* 調整後のサイズ */
+    height: 100px; /* 調整後のサイズ */
 }
 
 .pricing-section .price-card {
