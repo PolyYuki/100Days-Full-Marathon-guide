@@ -27,3 +27,13 @@ function hideSarcasticMessage() {
     const sarcasticMessageOverlay = document.getElementById('sarcastic-message-overlay');
     sarcasticMessageOverlay.classList.remove('active');
 }
+
+function showMoreSarcasticMessage() {
+    const moreSarcasticMessageOverlay = document.getElementById('more-sarcastic-message-overlay');
+    moreSarcasticMessageOverlay.classList.add('active');
+}
+
+function hideMoreSarcasticMessage() {
+    const moreSarcasticMessageOverlay = document.getElementById('more-sarcastic-message-overlay');
+    moreSarcasticMessageOverlay.classList.remove('active');
+}

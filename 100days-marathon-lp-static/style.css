@@ -3,107 +3,224 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fdf8f5; /* 暖色系の背景 */
+    background: linear-gradient(to bottom right, #fdf8f5, #ffe0b2); /* 暖色系のグラデーション背景 */
     color: #333;
+    line-height: 1.6;
 }
 
 .hero-section {
     text-align: center;
-    background-color: #ffecd2; /* 明るい暖色 */
-    color: #d35400;
-    padding: 100px 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* 鮮やかなグラデーション */
+    color: white;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .hero-section h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
 }
 
 .hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .cta-button {
-    background-color: #ff7f50; /* ポップなオレンジ */
-    color: white;
-    padding: 15px 30px;
+    background-color: #ffeb3b; /* 鮮やかな黄色 */
+    color: #d35400;
+    padding: 18px 35px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background-color: #e65c00;
+    background-color: #fbc02d;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .section {
-    padding: 60px 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1000px;
+}
+
+.section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 2.8em;
+    color: #e65c00;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #ff7f50;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .features-section ul,
 .problems-section ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .features-section li,
 .problems-section li {
     background-color: #fff3e0;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 600px;
+    margin: 0;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 320px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features-section li:hover,
+.problems-section li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    color: #ff7f50;
+    font-size: 2em;
+    min-width: 40px;
+}
+
+.solution-diagram {
+    max-width: 90%;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid #ffecd2;
 }
 
 .testimonials-section .testimonial-card {
     background-color: #fff3e0;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 650px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonials-section .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #ff7f50;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .pricing-section .price-card {
     background-color: #fff3e0;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #ff7f50;
+}
+
+.pricing-section .price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-large {
+    color: #ff7f50;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 .faq-item {
     background-color: #fff3e0;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 10px auto;
-    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    max-width: 850px;
     text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.faq-item:hover {
+    background-color: #ffeccf;
 }
 
 .faq-item h3 {
     margin-top: 0;
     color: #ff7f50;
+    font-size: 1.3em;
 }
 
 .cta-section {
-    background-color: #ffecd2;
-    padding: 80px 20px;
+    background: linear-gradient(to right, #feb47b, #ff7e5f); /* ヒーローセクションと同じグラデーション */
+    padding: 100px 20px;
+    color: white;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .cta-section h2 {
-    font-size: 2.5em;
-    color: #d35400;
-    margin-bottom: 40px;
+    font-size: 3em;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 /* ジョークオーバーレイ */
@@ -113,14 +230,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .overlay.active {
@@ -130,13 +247,14 @@ body {
 
 .overlay-content {
     background-color: white;
-    padding: 40px;
-    border-radius: 10px;
+    padding: 50px;
+    border-radius: 20px;
     text-align: center;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+    border: 5px solid #ff7f50;
 }
 
 .overlay.active .overlay-content {
@@ -145,48 +263,66 @@ body {
 
 .overlay-content h2 {
     color: #d35400;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-shadow: none; /* オーバーレイ内のh2は影なし */
 }
 
 .overlay-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .overlay-content button {
     background-color: #ff7f50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 25px;
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .overlay-content button:hover {
     background-color: #e65c00;
+    transform: translateY(-3px);
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .hero-section h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .hero-section p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .section {
-        padding: 40px 15px;
+        padding: 60px 15px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 
     .cta-button {
-        padding: 12px 25px;
-        font-size: 1em;
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+
+    .features-section ul,
+    .problems-section ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-section li,
+    .problems-section li {
+        max-width: 90%;
     }
 
     .overlay-content {

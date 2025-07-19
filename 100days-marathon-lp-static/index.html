@@ -6,53 +6,72 @@
     <title>100日でフルマラソン完走する裏技ガイド</title>
     <meta name="description" content="40代の運動習慣のない初心者でも、最短で達成できるフルマラソン完走の攻略ガイド！...と思いきや！？">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="hero-section">
+        <!-- 背景画像やイラストをここに配置すると良いでしょう -->
         <h1>100日でフルマラソン完走する裏技ガイド</h1>
         <p>40代の運動習慣のない初心者でも、最短で達成できるフルマラソン完走の攻略ガイド！</p>
         <button class="cta-button" onclick="showTemporaryMessage()">今すぐ裏技をGET！</button>
-        
     </header>
 
     <section id="features" class="section features-section">
         <h2>このガイドで得られるもの</h2>
         <ul>
-            <li>運動嫌いでも続けられる！</li>
-            <li>無理なく楽しく走れる秘訣！</li>
-            <li>怪我なく完走するための裏ワザ！</li>
+            <li><i class="fas fa-running icon"></i> 運動嫌いでも続けられる！</li>
+            <li><i class="fas fa-smile-beam icon"></i> 無理なく楽しく走れる秘訣！</li>
+            <li><i class="fas fa-shield-alt icon"></i> 怪我なく完走するための裏ワザ！</li>
         </ul>
     </section>
 
     <section id="problems" class="section problems-section">
         <h2>こんなお悩みありませんか？</h2>
         <ul>
-            <li>運動が苦手で何から始めていいか分からない</li>
-            <li>フルマラソンなんて夢のまた夢だと思っている</li>
-            <li>忙しくてトレーニングの時間が取れない</li>
+            <li><i class="fas fa-question-circle icon"></i> 運動が苦手で何から始めていいか分からない</li>
+            <li><i class="fas fa-cloud icon"></i> フルマラソンなんて夢のまた夢だと思っている</li>
+            <li><i class="fas fa-clock icon"></i> 忙しくてトレーニングの時間が取れない</li>
         </ul>
     </section>
 
     <section id="solution" class="section solution-section">
         <h2>その悩み、このガイドが解決します！</h2>
         <p>独自のメソッドで、あなたのマラソン完走をサポートします。</p>
+        <!-- 解決策の図やイラストをここに配置 -->
+        <img src="https://via.placeholder.com/600x300?text=Solution+Diagram" alt="解決策の図" class="solution-diagram">
     </section>
 
     <section id="testimonials" class="section testimonials-section">
         <h2>お客様の声</h2>
         <div class="testimonial-card">
+            <img src="https://via.placeholder.com/80x80?text=User" alt="お客様のプロフィール画像" class="profile-img">
             <p>"まさか自分がフルマラソンを完走できるなんて！このガイドのおかげです！"</p>
             <p>- 40代 男性</p>
         </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/80x80?text=User2" alt="お客様のプロフィール画像" class="profile-img">
+            <p>"半信半疑でしたが、このガイドを信じてよかったです！人生が変わりました！"</p>
+            <p>- 50代 女性</p>
+        </div>
+        <!-- 他のお客様の声も追加可能 -->
     </section>
 
     <section id="pricing" class="section pricing-section">
         <h2>料金プラン</h2>
         <div class="price-card">
+            <i class="fas fa-star icon-large"></i>
             <h3>ベーシックプラン</h3>
             <p>月額 9,800円</p>
             <button class="cta-button" onclick="showSarcasticMessage()">申し込む</button>
         </div>
+        <div class="price-card">
+            <i class="fas fa-trophy icon-large"></i>
+            <h3>アドバンスプラン</h3>
+            <p>月額 19,800円</p>
+            <button class="cta-button" onclick="showMoreSarcasticMessage()">申し込む</button>
+        </div>
+        <!-- 他のプランも追加可能 -->
     </section>
 
     <section id="cta" class="section cta-section">
@@ -63,9 +82,10 @@
     <section id="faq" class="section faq-section">
         <h2>よくある質問</h2>
         <div class="faq-item">
-            <h3>Q. 本当に100日で完走できますか？</h3>
+            <h3><i class="fas fa-question icon"></i> Q. 本当に100日で完走できますか？</h3>
             <p>A. 本ガイドに忠実に従って実践すれば必ず完走できます</p>
         </div>
+        <!-- 他のFAQも追加可能 -->
     </section>
 
     <div id="joke-overlay" class="overlay">
@@ -93,6 +113,16 @@
             <p>そんな甘い考えでフルマラソンが走れるなら、誰も苦労しませんよ。</p>
             <p>さあ、幻想は捨てて、現実と向き合いましょう。</p>
             <button onclick="hideSarcasticMessage()">現実を見る！</button>
+        </div>
+    </div>
+
+    <div id="more-sarcastic-message-overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>素晴らしい決断です！</h2>
+            <p>より高額なプランを選んだあなたは、きっと「お金で解決できる」と信じているのでしょう。</p>
+            <p>残念ながら、フルマラソンはあなたの足で走るものです。</p>
+            <p>さあ、財布を閉じて、今すぐ走り出しましょう！</p>
+            <button onclick="hideMoreSarcasticMessage()">走ってきます！</button>
         </div>
     </div>
 
